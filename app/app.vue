@@ -1,6 +1,8 @@
+<script setup lang="ts">
+const { fetchUser } = useAuth();
+await useAsyncData("init-user", () => fetchUser().then(() => true));
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtPage />
 </template>
